@@ -1,0 +1,18 @@
+In order to test my code, a java IDE must be used to open my java files. Once the java files have been loaded, the bluecove-2.1.2.jar must be added to the compilation. Once the files and jar have been compiled, on two computers, one computer must run Server_client.Consistency.java and thew other must run ConsitencyClient.java
+
+Assumptions made:
+	1. Both computers must run a version of my code as stated above.
+	2. Both computers must have bluetooth turned on. (PAIRS AUTOMATICALLY)
+	3. The text file that is being pushed for consistency ONLY includes text. (No tables, etc.)
+	4. Assuming the text file has set directory and therefore hardcoded.
+	5. If directory needs to specified then a simple scanner can be added but the project 		
+		specification implied automaticity therefore no user input other than running the 
+		code. 
+	6. Assuming the user has a router with either port 8080 open or uPNP enabled.
+	7. If port needs to be specified by user, a simple scanner can be added to allow user to enter 
+		what port they would like to use
+
+Known Bugs:
+	1. I am unsure if it is software or hardware bug but when I run the code on both computers as stated above, the client computer ALWAYS finds and connects to the non-client computer but the non-client computer sometimes does not recognize the connection and gets stuck at line 43 (StreamConnection sc = scn.acceptAndOpen( ); ) and the code on both computers must be re-run. I am assuming this is a hardware bug as I am using Mac’s as both of my computers and Mac has its own file sharing called “AirDrop” which may be interfering with incoming bluetooth connections, causing the incoming connection to not be recognized as a pure bluetooth and instead being handled by the “AirDrop” handler.
+
+	2. If a different version Bluecove is used, the code will not work as Bluecove has gone through different iterations both on Windows, as well as OS X.
